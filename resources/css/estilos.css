@@ -1,0 +1,209 @@
+/* =========================
+  THE ARBORIA INITIATIVE — styles.css
+  Paleta y tipografía en variables, layout con Grid/Flex,
+  animaciones sutiles y enfoque accesible.
+========================= */
+
+/* Variables de tema */
+:root{
+  --bg: #f6fbf7;               /* claro orgánico */
+  --card: #ffffff;
+  --ink: #1d2b23;              /* texto principal (alto contraste) */
+  --muted: #5f6f66;
+  --accent: #1e5f4b;           /* verde profundo */
+  --accent-soft: #bfe3c6;      /* verde suave */
+  --accent-ghost: #e7f3eb;     /* fondo sutil para chips/badges */
+  --trunk: #6a4d2e;            /* marrón suave */
+  --sand: #efe7da;             /* arena */
+  --shadow: 0 10px 30px rgba(30,95,75,.12);
+  --radius: 16px;
+  --radius-lg: 22px;
+
+  --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  --step-1: clamp(2.2rem, 3.2vw + 1rem, 3.4rem);
+  --step-2: clamp(1.4rem, 1.2vw + 1rem, 1.8rem);
+  --step-3: 1.06rem;
+}
+
+/* Reset básico y accesibilidad */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:var(--font); color:var(--ink); background:var(--bg);
+  text-rendering:optimizeLegibility; -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%; height:auto; display:block}
+a{color:inherit; text-decoration:none}
+a:focus-visible, button:focus-visible{outline:3px solid var(--accent-soft); outline-offset:2px}
+.container{width:min(1120px, 92%); margin-inline:auto}
+
+/* Header */
+.site-header{
+  position:sticky; top:0; z-index: 50; background:rgba(246,251,247,.8); backdrop-filter:saturate(1.2) blur(8px);
+  border-bottom:1px solid rgba(29,43,35,.06);
+}
+.header__wrap{display:flex; align-items:center; gap:1rem; min-height:72px}
+.brand{display:flex; align-items:center; gap:.6rem; font-weight:700}
+.brand__name{letter-spacing:.2px}
+.brand__mark{width:32px; height:32px}
+.fill-accent{fill:var(--accent)}
+.fill-accent-soft{fill:var(--accent-soft)}
+.fill-trunk{fill:var(--trunk)}
+.nav{margin-left:auto; display:flex; gap:1.2rem}
+.nav__link{
+  padding:.6rem .4rem; border-radius:10px; transition:background .25s ease,color .25s ease;
+}
+.nav__link:hover{background:var(--accent-ghost); color:var(--accent)}
+.header__cta{margin-left:.4rem}
+.header__menu{display:none; margin-left:auto; background:none; border:0; cursor:pointer}
+.menu__bar{display:block; width:22px; height:2px; background:var(--ink); margin:4px 0; border-radius:2px}
+
+/* Menú móvil (simple: aparece en pantallas pequeñas) */
+.menu-mobile{display:none}
+.menu-mobile__link{display:block; padding:1rem 1.2rem; border-top:1px solid rgba(29,43,35,.06); background:#fff}
+.menu-mobile__cta{background:var(--accent-ghost); color:var(--accent); font-weight:600}
+
+/* Botones */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:.6rem;
+  padding:.8rem 1.1rem; border-radius:999px; border:1px solid transparent;
+  font-weight:600; transition:transform .18s ease, box-shadow .25s ease, background .25s ease, color .25s ease, border-color .25s ease;
+  will-change:transform;
+}
+.btn--primary{background:var(--accent); color:#fff; box-shadow:var(--shadow)}
+.btn--primary:hover{transform:translateY(-2px); box-shadow:0 16px 36px rgba(30,95,75,.18)}
+.btn--ghost{background:transparent; border-color:rgba(29,43,35,.15)}
+.btn--ghost:hover{background:var(--accent-ghost); color:var(--accent)}
+.btn--xl{padding:1rem 1.4rem; font-size:1.05rem}
+
+/* Secciones */
+.section{padding: clamp(64px, 10vw, 104px) 0}
+.section__header{display:grid; gap:.6rem; margin-bottom:2rem; text-wrap:balance}
+.section__lede{color:var(--muted); max-width:70ch}
+h1{font-size:var(--step-1); line-height:1.05; letter-spacing:-.02em; margin:0 0 1rem}
+h2{font-size:var(--step-2); line-height:1.15; letter-spacing:-.01em; margin:0}
+h3{font-size:1.12rem; margin:.2rem 0}
+
+/* HERO */
+.hero{
+  background:
+    radial-gradient(1200px 400px at 70% 20%, #eaf6ef 10%, transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbf8 80%);
+  overflow:hidden;
+}
+.hero__wrap{display:grid; grid-template-columns: 1.05fr .95fr; align-items:center; gap: min(6vw, 56px)}
+.hero__subtitle{color:var(--muted); font-size:1.1rem}
+.hero__actions{display:flex; gap:.8rem; margin-top:1rem}
+.hero__badges{display:flex; flex-wrap:wrap; gap:.5rem; list-style:none; padding:0; margin:1.1rem 0 0}
+.badge{background:var(--accent-ghost); color:var(--accent); padding:.45rem .7rem; border-radius:999px; font-weight:600; font-size:.88rem}
+.hero__art{position:relative}
+.hero__svg{width:100%; filter: drop-shadow(var(--shadow))}
+.art__halo{fill:var(--sand)}
+.art__trunk{fill:var(--trunk)}
+.art__dot{fill:var(--accent-soft); opacity:.8}
+
+/* PROBLEMA */
+.stats{
+  display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem; margin-top:1rem;
+}
+.card{
+  background:var(--card); border:1px solid rgba(29,43,35,.06);
+  border-radius:var(--radius); box-shadow:var(--shadow); padding:1.2rem;
+  transform:translateY(0); transition:transform .2s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.card:hover{transform:translateY(-3px); box-shadow:0 20px 40px rgba(30,95,75,.12)}
+.stat__value{font-weight:800}
+.stat__desc{color:var(--muted)}
+
+/* SOLUCIÓN */
+.steps{display:grid; grid-template-columns:repeat(3, 1fr); gap:1rem}
+.step{display:grid; gap:.4rem}
+.step__icon{width:56px; height:56px}
+.stroke-accent{stroke:var(--accent)}
+.fill-accent-soft{fill:var(--accent-soft)}
+
+/* GALERÍA */
+.gallery__grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:12px}
+.tile{border-radius:var(--radius-lg); overflow:hidden; background:var(--card); box-shadow:var(--shadow)}
+.tile__img{aspect-ratio: 4/3; background-size:cover; background-position:center; transition: transform .4s ease}
+.tile:hover .tile__img{transform: scale(1.03)}
+.tile figcaption{font-size:.94rem; padding:.7rem .9rem; color:var(--muted)}
+/* Pseudo “fotografías” con gradientes y formas orgánicas */
+.tile__img--a{background:
+  radial-gradient(60% 60% at 70% 40%, #bfe3c6 0 60%, transparent 61%),
+  linear-gradient(135deg,#dff2e6 0%,#bfe3c6 100%)}
+.tile__img--b{background:
+  radial-gradient(50% 50% at 30% 60%, #bfe3c6 0 60%, transparent 61%),
+  linear-gradient(135deg,#f5faf6 0%,#d0edd9 100%)}
+.tile__img--c{background:
+  radial-gradient(40% 40% at 30% 30%, #bfe3c6 0 60%, transparent 61%),
+  linear-gradient(135deg,#eaf6ef 0%,#bfe3c6 100%)}
+.tile__img--d{background:
+  radial-gradient(60% 60% at 65% 70%, #bfe3c6 0 60%, transparent 61%),
+  linear-gradient(135deg,#f1f8f3 0%,#cfead7 100%)}
+
+/* TESTIMONIOS / SOCIOS */
+.quote{font-size:1.05rem; line-height:1.6}
+.partners{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:1rem}
+.logo{width:100%; height:48px}
+.logo__text{font: 700 22px/1 var(--font); fill: var(--accent)}
+
+/* CTA FINAL */
+.cta{
+  background: linear-gradient(180deg, #e8f4ec 0%, #ffffff 100%);
+  border-top:1px solid rgba(29,43,35,.06);
+}
+.cta__wrap{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem;
+  background:var(--card); border-radius:var(--radius-lg); padding:1.2rem 1.4rem; box-shadow:var(--shadow)
+}
+
+/* Footer */
+.site-footer{padding:28px 0; border-top:1px solid rgba(29,43,35,.06)}
+.footer__wrap{display:flex; align-items:center; justify-content:space-between; gap:1rem; color:var(--muted)}
+.footer__link{color:var(--accent)}
+.footer__link:hover{text-decoration:underline}
+
+/* Animaciones sutiles (entrada orquestada por delays) */
+@keyframes riseFade{
+  from{opacity:0; transform: translateY(8px)}
+  to{opacity:1; transform: translateY(0)}
+}
+.hero__title, .hero__subtitle, .hero__actions, .hero__badges, .hero__art{
+  animation: riseFade .6s ease both;
+}
+.hero__subtitle{animation-delay:.08s}
+.hero__actions{animation-delay:.16s}
+.hero__badges{animation-delay:.24s}
+.hero__art{animation-delay:.18s}
+
+/* Responsividad */
+@media (max-width: 1024px){
+  .hero__wrap{grid-template-columns:1fr}
+  .hero__art{order:-1}
+  .steps{grid-template-columns:repeat(2, 1fr)}
+  .gallery__grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width: 760px){
+  .nav{display:none}
+  .header__menu{display:block}
+  .menu-mobile{display:block}
+  .stats{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .gallery__grid{grid-template-columns:1fr 1fr}
+  .cta__wrap{flex-direction:column; align-items:flex-start}
+}
+
+/* Preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce){
+  *{animation: none !important; transition:none !important}
+}
+
+/* Utilidades */
+.header__wrap, .section__header, .stats, .steps, .gallery__grid, .partners, .cta__wrap, .footer__wrap{
+  view-transition-name: arboria-block; /* futurible sin efectos si no está soportado */
+}
+
+/* Colores rápidos para SVG internos */
+.art__halo{fill:var(--sand)}
+/* Fills/Stroke ya definidos con clases generales arriba */

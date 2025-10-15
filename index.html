@@ -1,0 +1,260 @@
+<!-- =========================
+THE ARBORIA INITIATIVE — Landing Page
+Tema: Minimalismo Natural (Claro y Orgánico)
+Autor: Antonio Montalvo (@antoniomontrz13)
+Estructura semántica + accesibilidad + animaciones sutiles
+========================== -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Arboria Initiative — Reforestación Global</title>
+  <meta name="description" content="The Arboria Initiative: Replantando nuestro futuro, un árbol a la vez. Únete a la reforestación global con transparencia e impacto medible." />
+
+  <!-- Enlace correcto a tu archivo de estilos -->
+  <link rel="stylesheet" href="resources/css/estilos.css">
+
+  <!-- Ícono opcional -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231e5f4b'/%3E%3C/svg%3E">
+</head>
+
+
+<body>
+  <!-- Navegación mínima: un objetivo y CTA claros -->
+  <header class="site-header" role="banner">
+    <div class="container header__wrap">
+      <a class="brand" href="#inicio" aria-label="Inicio - The Arboria Initiative">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="31" class="fill-accent-soft"/>
+          <path d="M32 10c8 7 14 15 14 22s-6 12-14 12-14-5-14-12 6-15 14-22z" class="fill-accent"/>
+          <rect x="30" y="42" width="4" height="12" rx="2" class="fill-trunk"/>
+        </svg>
+        <span class="brand__name">The Arboria Initiative</span>
+      </a>
+      <nav class="nav" aria-label="Secciones principales">
+        <a href="#problema" class="nav__link">El Problema</a>
+        <a href="#solucion" class="nav__link">Nuestra Solución</a>
+        <a href="#galeria" class="nav__link">Impacto</a>
+        <a href="#testimonios" class="nav__link">Testimonios</a>
+      </nav>
+      <a href="#cta-final" class="btn btn--primary header__cta">Planta un Árbol</a>
+      <button class="header__menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-mobile">
+        <span class="menu__bar"></span><span class="menu__bar"></span><span class="menu__bar"></span>
+      </button>
+    </div>
+    <!-- Menú móvil (sin JS: visible con CSS en breakpoints) -->
+    <div id="menu-mobile" class="menu-mobile" role="navigation" aria-label="Menú móvil">
+      <a href="#problema" class="menu-mobile__link">El Problema</a>
+      <a href="#solucion" class="menu-mobile__link">Nuestra Solución</a>
+      <a href="#galeria" class="menu-mobile__link">Impacto</a>
+      <a href="#testimonios" class="menu-mobile__link">Testimonios</a>
+      <a href="#cta-final" class="menu-mobile__link menu-mobile__cta">Planta un Árbol</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO ==================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__wrap">
+        <div class="hero__content">
+          <h1 id="hero-title" class="hero__title">Replantando Nuestro Futuro, Un Árbol a la Vez.</h1>
+          <p class="hero__subtitle">
+            Cada contribución financia la plantación de especies nativas donde más se necesitan. 
+            Transparencia total, impacto medible.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--xl" href="#cta-final">Planta un Árbol Ahora</a>
+            <a class="btn btn--ghost" href="#solucion">Cómo funciona</a>
+          </div>
+          <ul class="hero__badges" aria-label="Logros y confianza">
+            <li class="badge">Certificado con coordenadas reales</li>
+            <li class="badge">Viveros y brigadas locales</li>
+            <li class="badge">Reporte trimestral de crecimiento</li>
+          </ul>
+        </div>
+
+        <!-- Ilustración hero 100% SVG inline para nitidez -->
+        <figure class="hero__art" aria-hidden="true">
+          <svg viewBox="0 0 320 320" class="hero__svg">
+            <defs>
+              <linearGradient id="leaf" x1="0" x2="1">
+                <stop offset="0%" stop-color="var(--accent-soft)"/>
+                <stop offset="100%" stop-color="var(--accent)"/>
+              </linearGradient>
+            </defs>
+            <circle cx="160" cy="160" r="155" class="art__halo"/>
+            <path d="M160 40c40 30 70 64 70 93s-30 51-70 51-70-22-70-51 30-63 70-93z" fill="url(#leaf)"/>
+            <rect x="153" y="185" width="14" height="60" rx="6" class="art__trunk"/>
+            <circle cx="80" cy="80" r="18" class="art__dot"/>
+            <circle cx="250" cy="110" r="10" class="art__dot"/>
+            <circle cx="220" cy="55" r="7" class="art__dot"/>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PROBLEMA ================= -->
+    <section id="problema" class="problem section" aria-labelledby="problem-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="problem-title">El Problema</h2>
+          <p class="section__lede">
+            Los bosques regulan el clima, conservan agua y sostienen biodiversidad. Su pérdida nos deja sin barreras naturales y agrava los eventos extremos.
+          </p>
+        </header>
+
+        <div class="stats">
+          <article class="stat card">
+            <h3 class="stat__value" aria-label="Cobertura forestal en riesgo">Cobertura en riesgo</h3>
+            <p class="stat__desc">Regiones críticas pierden bosques a un ritmo preocupante.</p>
+          </article>
+
+          <article class="stat card">
+            <h3 class="stat__value" aria-label="Degradación del suelo">Suelo degradado</h3>
+            <p class="stat__desc">Menos fertilidad y menor infiltración de agua.</p>
+          </article>
+
+          <article class="stat card">
+            <h3 class="stat__value" aria-label="Comunidades vulnerables">Comunidades vulnerables</h3>
+            <p class="stat__desc">Mayor exposición a sequías e inundaciones.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUCIÓN ================= -->
+    <section id="solucion" class="solution section" aria-labelledby="solution-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="solution-title">Nuestra Solución en 3 Pasos</h2>
+          <p class="section__lede">Transparente, local y trazable de principio a fin.</p>
+        </header>
+
+        <div class="steps">
+          <!-- Paso 1 -->
+          <article class="step card">
+            <div class="step__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <circle cx="32" cy="32" r="30" class="stroke-accent" fill="none" stroke-width="2"/>
+                <path d="M32 8l10 18H22L32 8zM20 40h24" class="stroke-accent" fill="none" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>1. Eliges tu región</h3>
+            <p>Selecciona el bioma que te inspira: bosque templado, manglar o selva tropical.</p>
+          </article>
+
+          <!-- Paso 2 -->
+          <article class="step card">
+            <div class="step__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <circle cx="32" cy="32" r="30" class="stroke-accent" fill="none" stroke-width="2"/>
+                <path d="M18 36c8-2 14-14 14-14s6 12 14 14M32 26v26" class="stroke-accent" fill="none" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>2. Nosotros plantamos un árbol nativo</h3>
+            <p>Trabajamos con viveros y brigadas locales para asegurar supervivencia y diversidad.</p>
+          </article>
+
+          <!-- Paso 3 -->
+          <article class="step card">
+            <div class="step__icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <circle cx="32" cy="32" r="30" class="stroke-accent" fill="none" stroke-width="2"/>
+                <path d="M18 34l10 10 18-22" class="stroke-accent" fill="none" stroke-width="2" stroke-linecap="round"/>
+                <rect x="14" y="46" width="36" height="10" rx="2" class="fill-accent-soft"/>
+              </svg>
+            </div>
+            <h3>3. Recibes un certificado con coordenadas</h3>
+            <p>Te enviamos un certificado único con ubicación y actualizaciones de crecimiento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA ================== -->
+    <section id="galeria" class="gallery section" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="gallery-title">Galería de Impacto</h2>
+          <p class="section__lede">Un vistazo a los sitios de restauración y a las brigadas en acción.</p>
+        </header>
+
+        <div class="gallery__grid">
+          <!-- Elementos abstractos (SVG/gradientes) que simulan fotos sin dependencias externas -->
+          <figure class="tile">
+            <div class="tile__img tile__img--a" role="img" aria-label="Plantación comunitaria al amanecer"></div>
+            <figcaption>Plantación comunitaria al amanecer</figcaption>
+          </figure>
+
+          <figure class="tile">
+            <div class="tile__img tile__img--b" role="img" aria-label="Vivero de especies nativas"></div>
+            <figcaption>Vivero de especies nativas</figcaption>
+          </figure>
+
+          <figure class="tile">
+            <div class="tile__img tile__img--c" role="img" aria-label="Crecimiento a 12 meses"></div>
+            <figcaption>Crecimiento a 12 meses</figcaption>
+          </figure>
+
+          <figure class="tile">
+            <div class="tile__img tile__img--d" role="img" aria-label="Recuperación de suelo y sombra"></div>
+            <figcaption>Recuperación de suelo y sombra</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS / SOCIOS ===== -->
+    <section id="testimonios" class="testimonials section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="testimonials-title">Testimonios &amp; Socios</h2>
+        </header>
+
+        <blockquote class="quote card">
+          <p>“Restaurar bosques nativos es una de las soluciones climáticas más efectivas a largo plazo. Ver a la comunidad involucrarse hace la diferencia.”</p>
+          <footer>— <strong>Dra. Maya Ríos</strong>, Bióloga de Campo</footer>
+        </blockquote>
+
+        <div class="partners" aria-label="Logos de socios">
+          <div class="partner">
+            <svg viewBox="0 0 160 48" class="logo">
+              <text x="10" y="32" class="logo__text">GeoFund</text>
+              <circle cx="130" cy="24" r="10" class="fill-accent"/>
+            </svg>
+          </div>
+          <div class="partner">
+            <svg viewBox="0 0 200 48" class="logo">
+              <text x="10" y="32" class="logo__text">Evergreen Corp</text>
+              <rect x="150" y="12" width="36" height="20" rx="4" class="fill-accent-soft"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL ================ -->
+    <section id="cta-final" class="cta section" aria-labelledby="cta-title">
+      <div class="container cta__wrap">
+        <div class="cta__content">
+          <h2 id="cta-title">Súmate hoy</h2>
+          <p class="section__lede">Tu decisión de plantar un árbol puede cambiar el microclima de una comunidad.</p>
+        </div>
+        <a class="btn btn--primary btn--xl" href="#inicio" aria-label="Plantar un árbol ahora">Planta un Árbol Ahora</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__wrap">
+      <p>© <span id="year"></span> The Arboria Initiative · Transparencia · Trazabilidad · Impacto</p>
+      <a class="footer__link" href="#problema">Política de reforestación</a>
+    </div>
+    <!-- Pequeño script inline y opcional para año dinámico (no frameworks) -->
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
