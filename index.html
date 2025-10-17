@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Calma — Tu espacio para sentirte mejor</title>
-  <meta name="description" content="Herramientas interactivas, recursos y apoyo profesional para tu bienestar emocional.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect rx='24' width='96' height='96' fill='%23f2f6ff'/%3E%3Cpath d='M18 54c10 10 20 10 30 0s20-10 30 0' fill='none' stroke='%235E77FF' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+  <meta name="description" content="Herramientas interactivas, recursos y apoyo profesional para tu bienestar emocional." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect rx='24' width='96' height='96' fill='%23f2f6ff'/%3E%3Cpath d='M18 54c10 10 20 10 30 0s20-10 30 0' fill='none' stroke='%235E77FF' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E" />
   <link rel="stylesheet" href="resources/css/estilos.css" />
 </head>
 <body>
@@ -16,11 +16,11 @@
         <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
           <defs>
             <linearGradient id="g" x1="0" x2="1">
-              <stop offset="0" stop-color="#76D1C4"/><stop offset="1" stop-color="#5E77FF"/>
+              <stop offset="0" stop-color="#70ffd6"/><stop offset="1" stop-color="#627bff"/>
             </linearGradient>
           </defs>
           <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#g)"/>
-          <path d="M14 34c7 7 14 7 21 0s14-7 21 0" class="stroke-brand"/>
+          <path d="M14 34c7 7 14 7 21 0s14-7 21 0" stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none" opacity=".9"/>
         </svg>
         <strong>Calma</strong>
       </a>
@@ -53,14 +53,15 @@
 
   <main id="inicio">
     <!-- HERO -->
-    <section class="hero section" aria-labelledby="home-title">
+    <section class="section hero" aria-labelledby="home-title">
       <div class="container hero__wrap">
         <div class="hero__copy">
           <span class="eyebrow">Bienestar emocional</span>
-          <h1 id="home-title">Tu espacio para sentirte mejor</h1>
+          <h1 id="home-title" class="hero__title">Tu espacio para sentirte mejor</h1>
           <p class="hero__subtitle">Herramientas interactivas, recursos y apoyo profesional para cuidar tu salud mental.</p>
           <div class="hero__actions">
             <a href="#registro" class="btn btn--primary">Comienza gratis</a>
+            <a href="#herramientas" class="btn btn--ghost">Explorar</a>
           </div>
           <ul class="hero__badges" aria-label="Funciones principales">
             <li class="chip">📓 Diario Emocional</li>
@@ -71,46 +72,28 @@
 
         <!-- Visual -->
         <div class="hero__visual" aria-hidden="true">
-          <div class="scene card">
+          <div class="scene">
             <div class="ring r1"></div>
             <div class="ring r2"></div>
             <div class="ring r3"></div>
-            <div class="dots"></div>
+            <div class="orb"></div>
           </div>
-          <p class="muted caption">Calma, claridad y acompañamiento</p>
+          <p class="caption muted">Calma, claridad y acompañamiento</p>
         </div>
       </div>
 
       <!-- Testimonios -->
       <div class="container testimonials">
-        <article class="card quote">
-          <p>“El diario me ayudó a ver mis patrones sin juzgarme.”</p>
-          <span class="muted">— Usuario anónimo</span>
-        </article>
-        <article class="card quote">
-          <p>“Las respiraciones guiadas me calman en minutos.”</p>
-          <span class="muted">— Usuario anónimo</span>
-        </article>
-        <article class="card quote">
-          <p>“Encontré terapeuta en mi idioma y presupuesto.”</p>
-          <span class="muted">— Usuario anónimo</span>
-        </article>
+        <article class="card quote"><p>“El diario me ayudó a ver mis patrones sin juzgarme.”</p><span class="muted">— Usuario anónimo</span></article>
+        <article class="card quote"><p>“Las respiraciones guiadas me calman en minutos.”</p><span class="muted">— Usuario anónimo</span></article>
+        <article class="card quote"><p>“Encontré terapeuta en mi idioma y presupuesto.”</p><span class="muted">— Usuario anónimo</span></article>
       </div>
 
       <!-- Cómo funciona -->
       <div class="container steps">
-        <article class="step card">
-          <div class="step__icon">📝</div>
-          <div><h3>1. Regístrate</h3><p>Crea tu cuenta en menos de un minuto.</p></div>
-        </article>
-        <article class="step card">
-          <div class="step__icon">🧰</div>
-          <div><h3>2. Explora tus herramientas</h3><p>Diario, meditaciones, metas y más.</p></div>
-        </article>
-        <article class="step card">
-          <div class="step__icon">🤝</div>
-          <div><h3>3. Conecta con profesionales</h3><p>Directorio verificado y agenda simple.</p></div>
-        </article>
+        <article class="card step"><div class="step__icon">📝</div><div><h3>1. Regístrate</h3><p class="muted">Crea tu cuenta en menos de un minuto.</p></div></article>
+        <article class="card step"><div class="step__icon">🧰</div><div><h3>2. Explora tus herramientas</h3><p class="muted">Diario, meditaciones, metas y más.</p></div></article>
+        <article class="card step"><div class="step__icon">🤝</div><div><h3>3. Conecta con profesionales</h3><p class="muted">Directorio verificado y agenda simple.</p></div></article>
       </div>
     </section>
 
@@ -119,69 +102,16 @@
       <div class="container">
         <header class="section__header">
           <h2 id="tools-title">Herramientas</h2>
-          <p class="section__lede">Elige lo que te sirva hoy. Siempre con lenguaje claro y amable.</p>
+          <p class="lede">Elige lo que te sirva hoy. Lenguaje claro y amable.</p>
         </header>
 
         <div class="grid cards-3">
-          <article class="card tool">
-            <div class="tool__icon">📓</div>
-            <h3>Diario de Emociones</h3>
-            <p class="muted">Escribe libremente, registra tu estado y observa patrones con el tiempo.</p>
-            <div class="row">
-              <a class="btn btn--primary" href="#dashboard">Guardar entrada</a>
-              <a class="btn btn--ghost" href="#dashboard">Ver mi historial</a>
-            </div>
-          </article>
-
-          <article class="card tool">
-            <div class="tool__icon">🧘</div>
-            <h3>Respiración & Meditaciones</h3>
-            <p class="muted">Audios y videos por objetivo: ansiedad, estrés, sueño, enfoque.</p>
-            <div class="row">
-              <a class="btn btn--primary" href="#herramientas">Reproducir</a>
-              <a class="btn btn--ghost" href="#herramientas">Añadir a favoritos</a>
-            </div>
-          </article>
-
-          <article class="card tool">
-            <div class="tool__icon">💬</div>
-            <h3>Chat de Apoyo</h3>
-            <p class="muted">Conversaciones 24/7 con enfoque TCC para identificar pensamientos y alternativas.</p>
-            <div class="row">
-              <a class="btn btn--primary" href="#herramientas">Iniciar conversación</a>
-              <a class="btn btn--ghost" href="#herramientas">Opciones rápidas</a>
-            </div>
-          </article>
-
-          <article class="card tool">
-            <div class="tool__icon">🎯</div>
-            <h3>Metas & Hábitos</h3>
-            <p class="muted">Define pequeñas metas y celebra avances diarios.</p>
-            <div class="row">
-              <a class="btn btn--primary" href="#dashboard">Crear nueva meta</a>
-              <a class="btn btn--ghost" href="#dashboard">Marcar como completado</a>
-            </div>
-          </article>
-
-          <article class="card tool">
-            <div class="tool__icon">📈</div>
-            <h3>Mi Progreso</h3>
-            <p class="muted">Visualiza tu evolución con gráficos simples y claros.</p>
-            <div class="row">
-              <a class="btn btn--primary" href="#dashboard">Ver progreso</a>
-              <a class="btn btn--ghost" href="#dashboard">Configurar</a>
-            </div>
-          </article>
-
-          <article class="card tool">
-            <div class="tool__icon">🔔</div>
-            <h3>Recordatorios</h3>
-            <p class="muted">Mantén hábitos saludables con recordatorios amables.</p>
-            <div class="row">
-              <a class="btn btn--primary" href="#dashboard">Activar</a>
-              <a class="btn btn--ghost" href="#dashboard">Preferencias</a>
-            </div>
-          </article>
+          <article class="card tool"><div class="tool__icon">📓</div><h3>Diario de Emociones</h3><p class="muted">Escribe libremente, registra tu estado y observa patrones con el tiempo.</p><div class="row"><a class="btn btn--primary" href="#dashboard">Guardar entrada</a><a class="btn btn--ghost" href="#dashboard">Ver historial</a></div></article>
+          <article class="card tool"><div class="tool__icon">🧘</div><h3>Respiración & Meditaciones</h3><p class="muted">Audios y videos por objetivo: ansiedad, estrés, sueño, enfoque.</p><div class="row"><a class="btn btn--primary" href="#herramientas">Reproducir</a><a class="btn btn--ghost" href="#herramientas">Favoritos</a></div></article>
+          <article class="card tool"><div class="tool__icon">💬</div><h3>Chat de Apoyo</h3><p class="muted">Conversaciones 24/7 con enfoque TCC para identificar pensamientos y alternativas.</p><div class="row"><a class="btn btn--primary" href="#herramientas">Iniciar</a><a class="btn btn--ghost" href="#herramientas">Opciones rápidas</a></div></article>
+          <article class="card tool"><div class="tool__icon">🎯</div><h3>Metas & Hábitos</h3><p class="muted">Define pequeñas metas y celebra avances diarios.</p><div class="row"><a class="btn btn--primary" href="#dashboard">Crear meta</a><a class="btn btn--ghost" href="#dashboard">Marcar logrado</a></div></article>
+          <article class="card tool"><div class="tool__icon">📈</div><h3>Mi Progreso</h3><p class="muted">Visualiza tu evolución con gráficos simples y claros.</p><div class="row"><a class="btn btn--primary" href="#dashboard">Ver progreso</a><a class="btn btn--ghost" href="#dashboard">Configurar</a></div></article>
+          <article class="card tool"><div class="tool__icon">🔔</div><h3>Recordatorios</h3><p class="muted">Mantén hábitos saludables con recordatorios amables.</p><div class="row"><a class="btn btn--primary" href="#dashboard">Activar</a><a class="btn btn--ghost" href="#dashboard">Preferencias</a></div></article>
         </div>
       </div>
     </section>
@@ -193,36 +123,24 @@
           <h2 id="resources-title">Recursos</h2>
         </header>
 
-        <div class="filters row wrap">
+        <div class="filters">
           <div class="chips">
-            <span class="chip">Ansiedad</span>
-            <span class="chip">Estrés</span>
-            <span class="chip">Sueño</span>
-            <span class="chip">Autoestima</span>
-            <span class="chip">Mindfulness</span>
+            <span class="chip chip--ghost">Ansiedad</span>
+            <span class="chip chip--ghost">Estrés</span>
+            <span class="chip chip--ghost">Sueño</span>
+            <span class="chip chip--ghost">Autoestima</span>
+            <span class="chip chip--ghost">Mindfulness</span>
           </div>
           <form class="search" role="search" onsubmit="event.preventDefault()">
-            <input class="search__input" type="search" placeholder="Buscar recursos…" aria-label="Buscar">
+            <input class="search__input" type="search" placeholder="Buscar recursos…" aria-label="Buscar" />
             <button class="search__btn" type="submit" title="Buscar" aria-label="Buscar">🔎</button>
           </form>
         </div>
 
         <div class="grid cards-3">
-          <article class="card post">
-            <h3>Qué hacer ante una crisis de ansiedad</h3>
-            <p class="muted">Guía breve con pasos simples y efectivos.</p>
-            <a class="btn btn--ghost" href="#recursos">Leer</a>
-          </article>
-          <article class="card post">
-            <h3>Respiraciones para dormir mejor</h3>
-            <p class="muted">Rutina de 5 minutos para relajar cuerpo y mente.</p>
-            <a class="btn btn--ghost" href="#recursos">Leer</a>
-          </article>
-          <article class="card post">
-            <h3>Entrevista: TCC en palabras simples</h3>
-            <p class="muted">Una conversación clara con especialistas.</p>
-            <a class="btn btn--ghost" href="#recursos">Ver video</a>
-          </article>
+          <article class="card post"><h3>Qué hacer ante una crisis de ansiedad</h3><p class="muted">Guía breve con pasos simples y efectivos.</p><a class="btn btn--ghost" href="#recursos">Leer</a></article>
+          <article class="card post"><h3>Respiraciones para dormir mejor</h3><p class="muted">Rutina de 5 minutos para relajar cuerpo y mente.</p><a class="btn btn--ghost" href="#recursos">Leer</a></article>
+          <article class="card post"><h3>Entrevista: TCC en palabras simples</h3><p class="muted">Una conversación clara con especialistas.</p><a class="btn btn--ghost" href="#recursos">Ver video</a></article>
         </div>
 
         <!-- Directorio de crisis -->
@@ -243,7 +161,7 @@
       <div class="container">
         <header class="section__header">
           <h2 id="pros-title">Profesionales</h2>
-          <p class="section__lede">Directorio verificado para dar el siguiente paso cuando lo necesites.</p>
+          <p class="lede">Directorio verificado para dar el siguiente paso cuando lo necesites.</p>
         </header>
 
         <div class="grid filters-3">
@@ -259,39 +177,9 @@
         </div>
 
         <div class="grid cards-3">
-          <article class="card pro">
-            <div class="avatar" aria-hidden="true"></div>
-            <div>
-              <h3>Dra. A. Rivera</h3>
-              <p class="muted">Psicóloga · TCC · 8 años</p>
-              <div class="row">
-                <a class="btn btn--ghost" href="#profesionales">Ver perfil</a>
-                <a class="btn btn--primary" href="#profesionales">Agendar</a>
-              </div>
-            </div>
-          </article>
-          <article class="card pro">
-            <div class="avatar" aria-hidden="true"></div>
-            <div>
-              <h3>Lic. M. Torres</h3>
-              <p class="muted">Mindfulness · Ansiedad · 5 años</p>
-              <div class="row">
-                <a class="btn btn--ghost" href="#profesionales">Ver perfil</a>
-                <a class="btn btn--primary" href="#profesionales">Agendar</a>
-              </div>
-            </div>
-          </article>
-          <article class="card pro">
-            <div class="avatar" aria-hidden="true"></div>
-            <div>
-              <h3>Psic. J. Salgado</h3>
-              <p class="muted">Terapia integrativa · 10 años</p>
-              <div class="row">
-                <a class="btn btn--ghost" href="#profesionales">Ver perfil</a>
-                <a class="btn btn--primary" href="#profesionales">Agendar</a>
-              </div>
-            </div>
-          </article>
+          <article class="card pro"><div class="avatar" aria-hidden="true"></div><div><h3>Dra. A. Rivera</h3><p class="muted">Psicóloga · TCC · 8 años</p><div class="row"><a class="btn btn--ghost" href="#profesionales">Ver perfil</a><a class="btn btn--primary" href="#profesionales">Agendar</a></div></div></article>
+          <article class="card pro"><div class="avatar" aria-hidden="true"></div><div><h3>Lic. M. Torres</h3><p class="muted">Mindfulness · Ansiedad · 5 años</p><div class="row"><a class="btn btn--ghost" href="#profesionales">Ver perfil</a><a class="btn btn--primary" href="#profesionales">Agendar</a></div></div></article>
+          <article class="card pro"><div class="avatar" aria-hidden="true"></div><div><h3>Psic. J. Salgado</h3><p class="muted">Terapia integrativa · 10 años</p><div class="row"><a class="btn btn--ghost" href="#profesionales">Ver perfil</a><a class="btn btn--primary" href="#profesionales">Agendar</a></div></div></article>
         </div>
       </div>
     </section>
@@ -301,7 +189,7 @@
       <div class="container">
         <header class="section__header">
           <h2 id="dash-title">Tu Panel</h2>
-          <p class="section__lede">Una vista clara de tu día, accesos rápidos y progreso.</p>
+          <p class="lede">Una vista clara de tu día, accesos rápidos y progreso.</p>
         </header>
 
         <div class="grid grid--split">
@@ -320,31 +208,20 @@
           <article class="card quick">
             <h3>Acceso rápido</h3>
             <div class="grid cards-3">
-              <a class="tile" href="#herramientas">Escribir en mi diario</a>
-              <a class="tile" href="#herramientas">Iniciar meditación</a>
-              <a class="tile" href="#profesionales">Buscar ayuda</a>
+              <a class="btn" href="#herramientas" role="button">Escribir en mi diario</a>
+              <a class="btn" href="#herramientas" role="button">Iniciar meditación</a>
+              <a class="btn" href="#profesionales" role="button">Buscar ayuda</a>
             </div>
           </article>
         </div>
 
         <div class="grid cards-3" style="margin-top:12px">
-          <article class="card progress">
-            <h3>Mi Progreso</h3>
-            <div class="bar"><span style="width:64%"></span></div>
-            <p class="muted">Constancia semanal</p>
-          </article>
-          <article class="card progress">
-            <h3>Metas activas</h3>
-            <ul class="list">
-              <li>Meditar 5 minutos — <em>3/7</em></li>
-              <li>Caminar 30 minutos — <em>2/5</em></li>
-            </ul>
-          </article>
-          <article class="card progress">
-            <h3>Privacidad</h3>
-            <p class="muted">Tú decides qué guardar y cuándo eliminar.</p>
-            <a class="btn btn--ghost" href="#dashboard">Configuración</a>
-          </article>
+          <article class="card progress"><h3>Mi Progreso</h3><div class="bar"><span style="width:64%"></span></div><p class="muted">Constancia semanal</p></article>
+          <article class="card progress"><h3>Metas activas</h3><ul style="margin-top:.5rem; padding-left: 1rem;">
+            <li>Meditar 5 minutos — <em>3/7</em></li>
+            <li>Caminar 30 minutos — <em>2/5</em></li>
+          </ul></article>
+          <article class="card progress"><h3>Privacidad</h3><p class="muted">Tú decides qué guardar y cuándo eliminar.</p><a class="btn btn--ghost" href="#dashboard">Configuración</a></article>
         </div>
       </div>
     </section>
@@ -356,17 +233,22 @@
       <p>© <span id="year"></span> Calma — Bienestar emocional.</p>
       <a class="footer__link" href="#recursos">Ver recursos</a>
     </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-      // Menú móvil (solo UI)
-      const btn = document.querySelector('.header__menu');
-      const menu = document.getElementById('menu-mobile');
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menú móvil accesible
+    const btn = document.querySelector('.header__menu');
+    const menu = document.getElementById('menu-mobile');
+    if (btn && menu) {
       btn.addEventListener('click', () => {
         const open = btn.getAttribute('aria-expanded') === 'true';
         btn.setAttribute('aria-expanded', String(!open));
         menu.style.display = open ? 'none' : 'block';
       });
-    </script>
-  </footer>
+    }
+  </script>
 </body>
 </html>
