@@ -1,259 +1,371 @@
-<!-- =========================
-THE ARBORIA INITIATIVE — Landing Page
-Tema: Minimalismo Natural (Claro y Orgánico)
-Autor: Antonio Montalvo (@antoniomontrz13)
-Estructura semántica + accesibilidad + animaciones sutiles
-========================== -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Arboria Initiative — Reforestación Global</title>
-  <meta name="description" content="The Arboria Initiative: Replantando nuestro futuro, un árbol a la vez. Únete a la reforestación global con transparencia e impacto medible." />
-
-  <!-- Enlace correcto a tu archivo de estilos -->
-  <link rel="stylesheet" href="resources/css/estilos.css">
-
-  <!-- Ícono opcional -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%231e5f4b'/%3E%3C/svg%3E">
+  <title>Calma — Tu espacio para sentirte mejor</title>
+  <meta name="description" content="Herramientas interactivas, recursos y apoyo profesional para tu bienestar emocional.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'%3E%3Crect rx='24' width='96' height='96' fill='%23f2f6ff'/%3E%3Cpath d='M18 54c10 10 20 10 30 0s20-10 30 0' fill='none' stroke='%235E77FF' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="resources/css/estilos.css" />
 </head>
-
-
 <body>
-  <!-- Navegación mínima: un objetivo y CTA claros -->
+  <!-- Header -->
   <header class="site-header" role="banner">
     <div class="container header__wrap">
-      <a class="brand" href="#inicio" aria-label="Inicio - The Arboria Initiative">
-        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true">
-          <circle cx="32" cy="32" r="31" class="fill-accent-soft"/>
-          <path d="M32 10c8 7 14 15 14 22s-6 12-14 12-14-5-14-12 6-15 14-22z" class="fill-accent"/>
-          <rect x="30" y="42" width="4" height="12" rx="2" class="fill-trunk"/>
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#76D1C4"/><stop offset="1" stop-color="#5E77FF"/>
+            </linearGradient>
+          </defs>
+          <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#g)"/>
+          <path d="M14 34c7 7 14 7 21 0s14-7 21 0" class="stroke-brand"/>
         </svg>
-        <span class="brand__name">The Arboria Initiative</span>
+        <strong>Calma</strong>
       </a>
-      <nav class="nav" aria-label="Secciones principales">
-        <a href="#problema" class="nav__link">El Problema</a>
-        <a href="#solucion" class="nav__link">Nuestra Solución</a>
-        <a href="#galeria" class="nav__link">Impacto</a>
-        <a href="#testimonios" class="nav__link">Testimonios</a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="#inicio">Inicio</a>
+        <a class="nav__link" href="#herramientas">Herramientas</a>
+        <a class="nav__link" href="#recursos">Recursos</a>
+        <a class="nav__link" href="#profesionales">Profesionales</a>
       </nav>
-      <a href="#cta-final" class="btn btn--primary header__cta">Planta un Árbol</a>
+
+      <div class="header__actions">
+        <a class="btn btn--ghost" href="#login" role="button">Iniciar Sesión</a>
+        <a class="btn btn--primary" href="#registro" role="button">Regístrate</a>
+      </div>
+
       <button class="header__menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-mobile">
         <span class="menu__bar"></span><span class="menu__bar"></span><span class="menu__bar"></span>
       </button>
     </div>
-    <!-- Menú móvil (sin JS: visible con CSS en breakpoints) -->
-    <div id="menu-mobile" class="menu-mobile" role="navigation" aria-label="Menú móvil">
-      <a href="#problema" class="menu-mobile__link">El Problema</a>
-      <a href="#solucion" class="menu-mobile__link">Nuestra Solución</a>
-      <a href="#galeria" class="menu-mobile__link">Impacto</a>
-      <a href="#testimonios" class="menu-mobile__link">Testimonios</a>
-      <a href="#cta-final" class="menu-mobile__link menu-mobile__cta">Planta un Árbol</a>
-    </div>
+
+    <nav id="menu-mobile" class="menu-mobile" aria-label="Menú móvil">
+      <a href="#inicio" class="menu-mobile__link">Inicio</a>
+      <a href="#herramientas" class="menu-mobile__link">Herramientas</a>
+      <a href="#recursos" class="menu-mobile__link">Recursos</a>
+      <a href="#profesionales" class="menu-mobile__link">Profesionales</a>
+      <a href="#registro" class="menu-mobile__link menu-mobile__cta">Regístrate</a>
+    </nav>
   </header>
 
   <main id="inicio">
-    <!-- HERO ==================== -->
-    <section class="hero" aria-labelledby="hero-title">
+    <!-- HERO -->
+    <section class="hero section" aria-labelledby="home-title">
       <div class="container hero__wrap">
-        <div class="hero__content">
-          <h1 id="hero-title" class="hero__title">Replantando Nuestro Futuro, Un Árbol a la Vez.</h1>
-          <p class="hero__subtitle">
-            Cada contribución financia la plantación de especies nativas donde más se necesitan. 
-            Transparencia total, impacto medible.
-          </p>
+        <div class="hero__copy">
+          <span class="eyebrow">Bienestar emocional</span>
+          <h1 id="home-title">Tu espacio para sentirte mejor</h1>
+          <p class="hero__subtitle">Herramientas interactivas, recursos y apoyo profesional para cuidar tu salud mental.</p>
           <div class="hero__actions">
-            <a class="btn btn--primary btn--xl" href="#cta-final">Planta un Árbol Ahora</a>
-            <a class="btn btn--ghost" href="#solucion">Cómo funciona</a>
+            <a href="#registro" class="btn btn--primary">Comienza gratis</a>
           </div>
-          <ul class="hero__badges" aria-label="Logros y confianza">
-            <li class="badge">Certificado con coordenadas reales</li>
-            <li class="badge">Viveros y brigadas locales</li>
-            <li class="badge">Reporte trimestral de crecimiento</li>
+          <ul class="hero__badges" aria-label="Funciones principales">
+            <li class="chip">📓 Diario Emocional</li>
+            <li class="chip">🧘 Meditaciones</li>
+            <li class="chip">💬 Chat de Apoyo</li>
           </ul>
         </div>
 
-        <!-- Ilustración hero 100% SVG inline para nitidez -->
-        <figure class="hero__art" aria-hidden="true">
-          <svg viewBox="0 0 320 320" class="hero__svg">
-            <defs>
-              <linearGradient id="leaf" x1="0" x2="1">
-                <stop offset="0%" stop-color="var(--accent-soft)"/>
-                <stop offset="100%" stop-color="var(--accent)"/>
-              </linearGradient>
-            </defs>
-            <circle cx="160" cy="160" r="155" class="art__halo"/>
-            <path d="M160 40c40 30 70 64 70 93s-30 51-70 51-70-22-70-51 30-63 70-93z" fill="url(#leaf)"/>
-            <rect x="153" y="185" width="14" height="60" rx="6" class="art__trunk"/>
-            <circle cx="80" cy="80" r="18" class="art__dot"/>
-            <circle cx="250" cy="110" r="10" class="art__dot"/>
-            <circle cx="220" cy="55" r="7" class="art__dot"/>
-          </svg>
-        </figure>
-      </div>
-    </section>
-
-    <!-- PROBLEMA ================= -->
-    <section id="problema" class="problem section" aria-labelledby="problem-title">
-      <div class="container">
-        <header class="section__header">
-          <h2 id="problem-title">El Problema</h2>
-          <p class="section__lede">
-            Los bosques regulan el clima, conservan agua y sostienen biodiversidad. Su pérdida nos deja sin barreras naturales y agrava los eventos extremos.
-          </p>
-        </header>
-
-        <div class="stats">
-          <article class="stat card">
-            <h3 class="stat__value" aria-label="Cobertura forestal en riesgo">Cobertura en riesgo</h3>
-            <p class="stat__desc">Regiones críticas pierden bosques a un ritmo preocupante.</p>
-          </article>
-
-          <article class="stat card">
-            <h3 class="stat__value" aria-label="Degradación del suelo">Suelo degradado</h3>
-            <p class="stat__desc">Menos fertilidad y menor infiltración de agua.</p>
-          </article>
-
-          <article class="stat card">
-            <h3 class="stat__value" aria-label="Comunidades vulnerables">Comunidades vulnerables</h3>
-            <p class="stat__desc">Mayor exposición a sequías e inundaciones.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOLUCIÓN ================= -->
-    <section id="solucion" class="solution section" aria-labelledby="solution-title">
-      <div class="container">
-        <header class="section__header">
-          <h2 id="solution-title">Nuestra Solución en 3 Pasos</h2>
-          <p class="section__lede">Transparente, local y trazable de principio a fin.</p>
-        </header>
-
-        <div class="steps">
-          <!-- Paso 1 -->
-          <article class="step card">
-            <div class="step__icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64">
-                <circle cx="32" cy="32" r="30" class="stroke-accent" fill="none" stroke-width="2"/>
-                <path d="M32 8l10 18H22L32 8zM20 40h24" class="stroke-accent" fill="none" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>1. Eliges tu región</h3>
-            <p>Selecciona el bioma que te inspira: bosque templado, manglar o selva tropical.</p>
-          </article>
-
-          <!-- Paso 2 -->
-          <article class="step card">
-            <div class="step__icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64">
-                <circle cx="32" cy="32" r="30" class="stroke-accent" fill="none" stroke-width="2"/>
-                <path d="M18 36c8-2 14-14 14-14s6 12 14 14M32 26v26" class="stroke-accent" fill="none" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <h3>2. Nosotros plantamos un árbol nativo</h3>
-            <p>Trabajamos con viveros y brigadas locales para asegurar supervivencia y diversidad.</p>
-          </article>
-
-          <!-- Paso 3 -->
-          <article class="step card">
-            <div class="step__icon" aria-hidden="true">
-              <svg viewBox="0 0 64 64">
-                <circle cx="32" cy="32" r="30" class="stroke-accent" fill="none" stroke-width="2"/>
-                <path d="M18 34l10 10 18-22" class="stroke-accent" fill="none" stroke-width="2" stroke-linecap="round"/>
-                <rect x="14" y="46" width="36" height="10" rx="2" class="fill-accent-soft"/>
-              </svg>
-            </div>
-            <h3>3. Recibes un certificado con coordenadas</h3>
-            <p>Te enviamos un certificado único con ubicación y actualizaciones de crecimiento.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- GALERÍA ================== -->
-    <section id="galeria" class="gallery section" aria-labelledby="gallery-title">
-      <div class="container">
-        <header class="section__header">
-          <h2 id="gallery-title">Galería de Impacto</h2>
-          <p class="section__lede">Un vistazo a los sitios de restauración y a las brigadas en acción.</p>
-        </header>
-
-        <div class="gallery__grid">
-          <!-- Elementos abstractos (SVG/gradientes) que simulan fotos sin dependencias externas -->
-          <figure class="tile">
-            <div class="tile__img tile__img--a" role="img" aria-label="Plantación comunitaria al amanecer"></div>
-            <figcaption>Plantación comunitaria al amanecer</figcaption>
-          </figure>
-
-          <figure class="tile">
-            <div class="tile__img tile__img--b" role="img" aria-label="Vivero de especies nativas"></div>
-            <figcaption>Vivero de especies nativas</figcaption>
-          </figure>
-
-          <figure class="tile">
-            <div class="tile__img tile__img--c" role="img" aria-label="Crecimiento a 12 meses"></div>
-            <figcaption>Crecimiento a 12 meses</figcaption>
-          </figure>
-
-          <figure class="tile">
-            <div class="tile__img tile__img--d" role="img" aria-label="Recuperación de suelo y sombra"></div>
-            <figcaption>Recuperación de suelo y sombra</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIOS / SOCIOS ===== -->
-    <section id="testimonios" class="testimonials section" aria-labelledby="testimonials-title">
-      <div class="container">
-        <header class="section__header">
-          <h2 id="testimonials-title">Testimonios &amp; Socios</h2>
-        </header>
-
-        <blockquote class="quote card">
-          <p>“Restaurar bosques nativos es una de las soluciones climáticas más efectivas a largo plazo. Ver a la comunidad involucrarse hace la diferencia.”</p>
-          <footer>— <strong>Dra. Maya Ríos</strong>, Bióloga de Campo</footer>
-        </blockquote>
-
-        <div class="partners" aria-label="Logos de socios">
-          <div class="partner">
-            <svg viewBox="0 0 160 48" class="logo">
-              <text x="10" y="32" class="logo__text">GeoFund</text>
-              <circle cx="130" cy="24" r="10" class="fill-accent"/>
-            </svg>
+        <!-- Visual -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="scene card">
+            <div class="ring r1"></div>
+            <div class="ring r2"></div>
+            <div class="ring r3"></div>
+            <div class="dots"></div>
           </div>
-          <div class="partner">
-            <svg viewBox="0 0 200 48" class="logo">
-              <text x="10" y="32" class="logo__text">Evergreen Corp</text>
-              <rect x="150" y="12" width="36" height="20" rx="4" class="fill-accent-soft"/>
-            </svg>
-          </div>
+          <p class="muted caption">Calma, claridad y acompañamiento</p>
+        </div>
+      </div>
+
+      <!-- Testimonios -->
+      <div class="container testimonials">
+        <article class="card quote">
+          <p>“El diario me ayudó a ver mis patrones sin juzgarme.”</p>
+          <span class="muted">— Usuario anónimo</span>
+        </article>
+        <article class="card quote">
+          <p>“Las respiraciones guiadas me calman en minutos.”</p>
+          <span class="muted">— Usuario anónimo</span>
+        </article>
+        <article class="card quote">
+          <p>“Encontré terapeuta en mi idioma y presupuesto.”</p>
+          <span class="muted">— Usuario anónimo</span>
+        </article>
+      </div>
+
+      <!-- Cómo funciona -->
+      <div class="container steps">
+        <article class="step card">
+          <div class="step__icon">📝</div>
+          <div><h3>1. Regístrate</h3><p>Crea tu cuenta en menos de un minuto.</p></div>
+        </article>
+        <article class="step card">
+          <div class="step__icon">🧰</div>
+          <div><h3>2. Explora tus herramientas</h3><p>Diario, meditaciones, metas y más.</p></div>
+        </article>
+        <article class="step card">
+          <div class="step__icon">🤝</div>
+          <div><h3>3. Conecta con profesionales</h3><p>Directorio verificado y agenda simple.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTAS -->
+    <section id="herramientas" class="section" aria-labelledby="tools-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="tools-title">Herramientas</h2>
+          <p class="section__lede">Elige lo que te sirva hoy. Siempre con lenguaje claro y amable.</p>
+        </header>
+
+        <div class="grid cards-3">
+          <article class="card tool">
+            <div class="tool__icon">📓</div>
+            <h3>Diario de Emociones</h3>
+            <p class="muted">Escribe libremente, registra tu estado y observa patrones con el tiempo.</p>
+            <div class="row">
+              <a class="btn btn--primary" href="#dashboard">Guardar entrada</a>
+              <a class="btn btn--ghost" href="#dashboard">Ver mi historial</a>
+            </div>
+          </article>
+
+          <article class="card tool">
+            <div class="tool__icon">🧘</div>
+            <h3>Respiración & Meditaciones</h3>
+            <p class="muted">Audios y videos por objetivo: ansiedad, estrés, sueño, enfoque.</p>
+            <div class="row">
+              <a class="btn btn--primary" href="#herramientas">Reproducir</a>
+              <a class="btn btn--ghost" href="#herramientas">Añadir a favoritos</a>
+            </div>
+          </article>
+
+          <article class="card tool">
+            <div class="tool__icon">💬</div>
+            <h3>Chat de Apoyo</h3>
+            <p class="muted">Conversaciones 24/7 con enfoque TCC para identificar pensamientos y alternativas.</p>
+            <div class="row">
+              <a class="btn btn--primary" href="#herramientas">Iniciar conversación</a>
+              <a class="btn btn--ghost" href="#herramientas">Opciones rápidas</a>
+            </div>
+          </article>
+
+          <article class="card tool">
+            <div class="tool__icon">🎯</div>
+            <h3>Metas & Hábitos</h3>
+            <p class="muted">Define pequeñas metas y celebra avances diarios.</p>
+            <div class="row">
+              <a class="btn btn--primary" href="#dashboard">Crear nueva meta</a>
+              <a class="btn btn--ghost" href="#dashboard">Marcar como completado</a>
+            </div>
+          </article>
+
+          <article class="card tool">
+            <div class="tool__icon">📈</div>
+            <h3>Mi Progreso</h3>
+            <p class="muted">Visualiza tu evolución con gráficos simples y claros.</p>
+            <div class="row">
+              <a class="btn btn--primary" href="#dashboard">Ver progreso</a>
+              <a class="btn btn--ghost" href="#dashboard">Configurar</a>
+            </div>
+          </article>
+
+          <article class="card tool">
+            <div class="tool__icon">🔔</div>
+            <h3>Recordatorios</h3>
+            <p class="muted">Mantén hábitos saludables con recordatorios amables.</p>
+            <div class="row">
+              <a class="btn btn--primary" href="#dashboard">Activar</a>
+              <a class="btn btn--ghost" href="#dashboard">Preferencias</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- CTA FINAL ================ -->
-    <section id="cta-final" class="cta section" aria-labelledby="cta-title">
-      <div class="container cta__wrap">
-        <div class="cta__content">
-          <h2 id="cta-title">Súmate hoy</h2>
-          <p class="section__lede">Tu decisión de plantar un árbol puede cambiar el microclima de una comunidad.</p>
+    <!-- RECURSOS -->
+    <section id="recursos" class="section" aria-labelledby="resources-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="resources-title">Recursos</h2>
+        </header>
+
+        <div class="filters row wrap">
+          <div class="chips">
+            <span class="chip">Ansiedad</span>
+            <span class="chip">Estrés</span>
+            <span class="chip">Sueño</span>
+            <span class="chip">Autoestima</span>
+            <span class="chip">Mindfulness</span>
+          </div>
+          <form class="search" role="search" onsubmit="event.preventDefault()">
+            <input class="search__input" type="search" placeholder="Buscar recursos…" aria-label="Buscar">
+            <button class="search__btn" type="submit" title="Buscar" aria-label="Buscar">🔎</button>
+          </form>
         </div>
-        <a class="btn btn--primary btn--xl" href="#inicio" aria-label="Plantar un árbol ahora">Planta un Árbol Ahora</a>
+
+        <div class="grid cards-3">
+          <article class="card post">
+            <h3>Qué hacer ante una crisis de ansiedad</h3>
+            <p class="muted">Guía breve con pasos simples y efectivos.</p>
+            <a class="btn btn--ghost" href="#recursos">Leer</a>
+          </article>
+          <article class="card post">
+            <h3>Respiraciones para dormir mejor</h3>
+            <p class="muted">Rutina de 5 minutos para relajar cuerpo y mente.</p>
+            <a class="btn btn--ghost" href="#recursos">Leer</a>
+          </article>
+          <article class="card post">
+            <h3>Entrevista: TCC en palabras simples</h3>
+            <p class="muted">Una conversación clara con especialistas.</p>
+            <a class="btn btn--ghost" href="#recursos">Ver video</a>
+          </article>
+        </div>
+
+        <!-- Directorio de crisis -->
+        <div class="card crisis">
+          <h3>Si estás en una situación de emergencia</h3>
+          <p class="muted">Busca ayuda inmediata en tu país:</p>
+          <ul class="crisis__list">
+            <li>☎️ <strong>Línea de emergencia local</strong></li>
+            <li>🌐 <strong>International Suicide Hotlines</strong> — <em>Consulta servicios de tu región</em></li>
+            <li>💬 <strong>Chat de apoyo</strong> en organizaciones reconocidas</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESIONALES -->
+    <section id="profesionales" class="section" aria-labelledby="pros-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="pros-title">Profesionales</h2>
+          <p class="section__lede">Directorio verificado para dar el siguiente paso cuando lo necesites.</p>
+        </header>
+
+        <div class="grid filters-3">
+          <label class="label">Especialidad
+            <select class="input select"><option>Ansiedad</option><option>Depresión</option><option>TCC</option><option>Mindfulness</option></select>
+          </label>
+          <label class="label">Idioma
+            <select class="input select"><option>Español</option><option>Inglés</option><option>Portugués</option></select>
+          </label>
+          <label class="label">Modalidad
+            <select class="input select"><option>Online</option><option>Presencial</option><option>Híbrido</option></select>
+          </label>
+        </div>
+
+        <div class="grid cards-3">
+          <article class="card pro">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <h3>Dra. A. Rivera</h3>
+              <p class="muted">Psicóloga · TCC · 8 años</p>
+              <div class="row">
+                <a class="btn btn--ghost" href="#profesionales">Ver perfil</a>
+                <a class="btn btn--primary" href="#profesionales">Agendar</a>
+              </div>
+            </div>
+          </article>
+          <article class="card pro">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <h3>Lic. M. Torres</h3>
+              <p class="muted">Mindfulness · Ansiedad · 5 años</p>
+              <div class="row">
+                <a class="btn btn--ghost" href="#profesionales">Ver perfil</a>
+                <a class="btn btn--primary" href="#profesionales">Agendar</a>
+              </div>
+            </div>
+          </article>
+          <article class="card pro">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <h3>Psic. J. Salgado</h3>
+              <p class="muted">Terapia integrativa · 10 años</p>
+              <div class="row">
+                <a class="btn btn--ghost" href="#profesionales">Ver perfil</a>
+                <a class="btn btn--primary" href="#profesionales">Agendar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD (vista mock) -->
+    <section id="dashboard" class="section" aria-labelledby="dash-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="dash-title">Tu Panel</h2>
+          <p class="section__lede">Una vista clara de tu día, accesos rápidos y progreso.</p>
+        </header>
+
+        <div class="grid grid--split">
+          <article class="card">
+            <h3>Resumen del día</h3>
+            <p class="muted">Hola, <strong>Usuario</strong>. ¿Cómo te sientes hoy?</p>
+            <div class="mood-row">
+              <button class="mood" aria-label="contento">🙂</button>
+              <button class="mood" aria-label="tranquilo">😌</button>
+              <button class="mood" aria-label="preocupado">😟</button>
+              <button class="mood" aria-label="cansado">😴</button>
+              <button class="mood" aria-label="con energía">💪</button>
+            </div>
+          </article>
+
+          <article class="card quick">
+            <h3>Acceso rápido</h3>
+            <div class="grid cards-3">
+              <a class="tile" href="#herramientas">Escribir en mi diario</a>
+              <a class="tile" href="#herramientas">Iniciar meditación</a>
+              <a class="tile" href="#profesionales">Buscar ayuda</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid cards-3" style="margin-top:12px">
+          <article class="card progress">
+            <h3>Mi Progreso</h3>
+            <div class="bar"><span style="width:64%"></span></div>
+            <p class="muted">Constancia semanal</p>
+          </article>
+          <article class="card progress">
+            <h3>Metas activas</h3>
+            <ul class="list">
+              <li>Meditar 5 minutos — <em>3/7</em></li>
+              <li>Caminar 30 minutos — <em>2/5</em></li>
+            </ul>
+          </article>
+          <article class="card progress">
+            <h3>Privacidad</h3>
+            <p class="muted">Tú decides qué guardar y cuándo eliminar.</p>
+            <a class="btn btn--ghost" href="#dashboard">Configuración</a>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer__wrap">
-      <p>© <span id="year"></span> The Arboria Initiative · Transparencia · Trazabilidad · Impacto</p>
-      <a class="footer__link" href="#problema">Política de reforestación</a>
+      <p>© <span id="year"></span> Calma — Bienestar emocional.</p>
+      <a class="footer__link" href="#recursos">Ver recursos</a>
     </div>
-    <!-- Pequeño script inline y opcional para año dinámico (no frameworks) -->
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+      // Menú móvil (solo UI)
+      const btn = document.querySelector('.header__menu');
+      const menu = document.getElementById('menu-mobile');
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        menu.style.display = open ? 'none' : 'block';
+      });
     </script>
   </footer>
 </body>
